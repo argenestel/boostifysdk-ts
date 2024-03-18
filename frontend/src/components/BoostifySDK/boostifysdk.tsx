@@ -8,7 +8,7 @@ const BoostifySDK = () => {
   const [isAdmin, setIsAdmin] = useState(false);
   const aptosConfig = new AptosConfig({ network: Network.RANDOMNET, faucet: "https://faucet.random.aptoslabs.com" });
   const aptos = new Aptos(aptosConfig); // default to devnet
-  const { account, connected, signAndSubmitTransaction } = useWallet();
+  const { account, signAndSubmitTransaction } = useWallet();
   interface RewardObj {
     reward_active: boolean;
     reward_winners: string[];
